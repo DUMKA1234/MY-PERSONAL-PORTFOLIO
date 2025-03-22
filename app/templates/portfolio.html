@@ -1,0 +1,448 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'portfolio.css'%}">
+    <title>portfolio</title>
+</head>
+
+<body>
+    <!-- logo page -->
+    <div class="scroll-button">
+        <a href="#home"><i class="fas fa-arrow-up"></i></a>
+    </div>
+
+    <div class="container">
+        <img data-aos="fade-up" data-aos-duration="3000" src="{%static './images/Dumka1.jpg'%}" alt="">
+
+        <!-- start of navbar page -->
+        <h1 class="logo">DUMKA</h1>
+        
+        <div class="navbar">
+        <a href="#">HOME</a>
+        <a href="#">FEATURE</a>
+        <a href="#">PORTFOLIO</a>
+        <a href="#">RESUME</a>
+        <a href="#">PRICING</a>
+        <a href="#">CONTACT</a>
+    </div>
+            <div class="media-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+    
+
+
+    <!-- Scrollable content -->
+
+    <!-- Page contents -->
+<!-- home  page -->
+<div class="page-content">
+<div class="home">
+ <div class="text2">WELCOME TO MY WORLD</div>
+<div class="text3">Hi i'm <span>Dumka Nkue <br> Full Stack Developer</span></div>
+<button class="button">Hire Me</button>
+
+        </div>
+    
+    <div class='console-container'>
+        <span id='text'></span>
+        <div class='console-underscore' id='console'>&#95;
+
+        </div>
+    </div>
+    <script>
+        // function([string1, string2],target id,[color1,color2])    
+        consoleText(['a front-end Developer.', 'a Back-end Developer.', 'a Data Analyst.', 'a Djangle Developer.'], 'text', ['tomato', 'rebeccapurple', 'lightblue']);
+
+        function consoleText(words, id, colors) {
+            if (colors === undefined) colors = ['#fff'];
+            var visible = true;
+            var con = document.getElementById('console');
+            var letterCount = 1;
+            var x = 1;
+            var waiting = false;
+            var target = document.getElementById(id)
+            target.setAttribute('style', 'color:' + colors[0])
+            window.setInterval(function () {
+
+                if (letterCount === 0 && waiting === false) {
+                    waiting = true;
+                    target.innerHTML = words[0].substring(0, letterCount)
+                    window.setTimeout(function () {
+                        var usedColor = colors.shift();
+                        colors.push(usedColor);
+                        var usedWord = words.shift();
+                        words.push(usedWord);
+                        x = 1;
+                        target.setAttribute('style', 'color:' + colors[0])
+                        letterCount += x;
+                        waiting = false;
+                    }, 1000)
+                } else if (letterCount === words[0].length + 1 && waiting === false) {
+                    waiting = true;
+                    window.setTimeout(function () {
+                        x = -1;
+                        letterCount += x;
+                        waiting = false;
+                    }, 1000)
+                } else if (waiting === false) {
+                    target.innerHTML = words[0].substring(0, letterCount)
+                    letterCount += x;
+                }
+            }, 120)
+            window.setInterval(function () {
+                if (visible === true) {
+                    con.className = 'console-underscore hidden'
+                    visible = false;
+
+                } else {
+                    con.className = 'console-underscore'
+
+                    visible = true;
+                }
+            }, 400)
+        }
+    </script>
+    
+    <div class="text5">I am an experienced Front-End Developer. A Back-end Developer  with one years
+        plus experience building and designing websites and web apps from scratch. i build website using Html,
+        CSS, Javascript and React. HTML and CSS are the field of my expertise when it comes to building websites and
+        web apps using front-end. Django and Database are my expertise using Back-end.
+        I deal with servers as well. i am a Data Analyst using Excel, MySQL, Tableau, Power Bi and Python.
+    </div>
+    
+    <div class="con-image">
+        <img data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine"
+            src="{%static './images/dumka.jpg'%}" alt="">
+    </div>
+</div>
+</section>
+
+    <!-- feature page -->
+          
+            <div class="feature-content">
+                <div class="feature1">FEATURES
+                    <div class="feature">WHAT I DO</div>
+                </div>
+                <div class="feature-con">
+                    <div class="box2-frontend">
+                        <div class="frontend">Front-end Developer</div>
+                        i optimize the user experience using HTML, React,Jquery,Javascript and CSS to bring concept to
+                        life.
+                        i Develop and maintain user interface by following SEO best practices
+                    </div>
+
+                    <div class="box3-djangle">
+                        <div class="DJ-developer">Djangle Developer</div>
+                        l'm a Djange Developer expert. I use Djange to create registration form and login form for the user.
+                        This enable companies to get users details and communicate users for their businesses.
+                    </div>
+
+
+                    <div class="box5-backend">
+                        <div class="back-end">Back-end Developer</div> i optimize the user experience using Database and
+                        Django to
+                        bring concept to life.
+                    </div>
+
+                </div>
+                <div class="analysis-con">
+                    <div class="box4-analysis">
+            <div class="analysis"> Data Analysis</div>
+        i'm expertise for extracting and turning dataset to meaningful insight. i manipulate data,
+        conduct complexanalyses and generate insights to drive business decision. i create data visualization with Tableau,power bi
+        and  python   to tell a story with data.   i think critically and analyst data by identifying pattern,
+        trend and extracting actionable  insights  and information  from the information you have at hand.
+    </div>
+                </div>
+            </div>
+           
+
+
+    <!-- portfolio page -->
+    <!-- start of portfolio page -->
+            <!-- <div id="portfolio" class="page-content">  -->
+            <div class="port">
+                <h2>VISIT MY PORTFOLIO AND KEEP YOUR FEEDBACK</h2>
+               <h1> PORTFOLIO</h1>
+            </div>
+            <div class="portfolio-con">
+                <div class="box6-image">
+                    <img src="{%static '.\images\API2.jpg'%}" alt="">
+                </div>
+                <div class="djangle1">
+                    <div class="djangle1-text"> DJANGLE BACK-END </div>
+                    l'm a Djangle Developer expert. I use Djangle to create registration form and login form for the user.
+                    This enable companies to get and communicate users for their businesses.
+                </div>
+
+                <div class="box7-image">
+                    <img src="{%static '.\images\API3.jpg'%}" alt="">
+                </div>
+                <!-- DATA ANALYSIS VISUALIZATION -->
+
+            </div>
+            <div class="analysis-text"> DATA ANALYSIS VISUALIZATION</div>
+            <div class="analysis2-con">
+                <div class="powerbi-image">
+                    <img src="{%static '.\images\powerbi.jpg'%}" alt="">
+                </div>
+                <div class="powerbi">
+                    <div class="powerbi-text"> POWER BI VISUALIZATION </div>
+                    
+                </div>
+                <div class="tableau-image">
+                    <img src="{%static '.\images\TABLEAU ANALYSIS.png'%}" alt="">
+                </div>
+                <div class="tableau">
+                    <div class="tableau-text"> TABLEAU VISUALIZATION </div>
+                </div>
+            </div>
+    
+    </section>
+    <!-- start of resume section -->
+<!-- resume section -->
+ <!-- full stack SECTION OF RESUME -->
+ <div id="resume" class="page-content">
+<div class="my-experience">3+ Years of Experience<br> Full Stack</div>
+<div class="myresume">my resume</div>
+    <div class="con-experience">
+    <div class="box-experience2">
+        <h1> Front-end Job Experience</h1> 
+            State primary school Obeakpu 
+            Oyigbo, Rivers State. (2016-2018)<br>
+            my responsibility was to teach students how to solve problems using  computer system. 
+            i taught students how to design web using front-end.<br>  
+            my key responsibility was to optimize the user experience using HTML, 
+            React,Javascript and CSS to bring concept to life.  
+            i Develop and maintain user interface by following SEO best practices.
+        </div>
+        <div class="box-experience3">
+            <h1>Back-end Job Experience</h1> 
+            Community secondary school Umuakpahu  
+                Oyigbo, Rivers State. (2018-2020)<br> 
+                my responsibility was to teach students how to solve problems using  computer system. 
+                i taught students how to design web using back-end. 
+                my key responsibility was to optimize the user experience using Database and Djange 
+                to bring concept to life.  
+                i Develop and maintain user interface by following SEO best practices.
+            </div>
+        </div>
+        <div class="container-bar">
+            <div class="front-skill">BACK-END AND FRONT-END SKILLS</div>
+            <div class="container-bar">
+                <h1>full stack professional skills</h1>
+                <div class="bar learning" 
+                     data-skill="CSS">98%</div>
+                <div class="bar back basic" 
+                     data-skill="Python">75%</div>
+                <div class="bar back intermediate" 
+                     data-skill="HTML">95%</div>
+                <div class="bar front advanced" 
+                     data-skill="React">80%</div>
+                <div class="bar front expert" 
+                    data-skill="Djangle">85%</div>
+                    <div class="bar front expert2" 
+                    data-skill="Database">80%</div>
+            </div>
+        </div>  
+    
+<!-- DATA ANALYSIS SECTION OF RESUME -->
+<div class="resume-heading">DATA ANALYSIS SECTION OF MY RESUME <br>5+ Years of Experience</div>
+    <div class="resume" id="resume">
+        <section id="resume">
+            <div class="resume-con">
+                <button class="tablinks" onclick="openTab(event, 'education')">My Education Quality</button>
+                <button class="tablinks" onclick="openTab(event, 'professional-skills')">Data Analysis Professional skills</button>
+                <button class="tablinks" onclick="openTab(event, 'experience')">Data Analysis Job Experience</button>
+            </div>
+        </div>
+            <div id="education" class="tabcontent">
+                <!-- Experience content here -->
+                <h3>Education</h3>
+                <p>master degree in computer science</p>
+                <p>River state university (2020-2022)</p>
+                <p>Computer Professionals Registration Council of Nigeria</p>
+                <p>Area of Specialization(Computer Information System) </p>
+            </div>
+        </div>
+        <div id="experience" class="tabcontent">
+            <div class="box-experience">
+                    <h3>Data Analysis Job Experience</h3> 
+                <p>Intels Nigeria limited, Onne Head Office<br>(January-December, 2011) <br></p>
+                Position: Office Assistant <br> 
+                JOB DESCRIPTION: <br>
+                (1) Receipt and distribution of Vendor invoices and maintaining their respective log.<br>
+                (2)Preparation of document transmittals for the internal and external distribution.<br>
+                (3)Analyzing  Company documents using Data Analysis tools.
+                </div> 
+            </div>
+                  </div>
+            <div id="professional-skills" class="tabcontent">
+    
+     <div class="my-profession">DATA ANALYSIS PROFESSIONAL SKILLS</div>
+
+                <div class="skills">
+                    <div class="skill">
+                        <div class="outer">
+                            <div class="inner">
+                                <div class="number" data-target="90">0%</div>
+                            </div>
+                        </div>
+                        <p>EXCEL</p>
+                    </div>
+                    
+                        <div class="skill">
+                            <div class="outer">
+                                <div class="inner">
+                                    <div class="number" data-target="90">0%</div>
+                                </div>
+                            </div>
+                            <p>SQL</p>
+                        </div>
+                    <div class="skill">
+                        <div class="outer">
+                            <div class="inner">
+                                <div class="number" data-target="90">0%</div>
+                            </div>
+                        </div>
+                        <p>TABLEAU</p>
+                    </div>
+                    <div class="skill">
+                        <div class="outer">
+                            <div class="inner">
+                                <div class="number" data-target="90">0%</div>
+                            </div>
+                        </div>
+                        <p>POWER BI</p>
+                    </div>
+                    <div class="skill">
+                        <div class="outer">
+                            <div class="inner">
+                                <div class="number" data-target="90">0%</div>
+                            </div>
+                        </div>
+                        <p>PYTHON</p>
+                    </div>
+                </div>
+                
+                
+                
+    <script>
+        // javascript for open tap function
+        function openTab(event, tabName) {
+            // Get all elements with class="tabcontent" and hide them
+            var tabcontents = document.getElementsByClassName("tabcontent");
+            for (var i = 0; i < tabcontents.length; i++) {
+                tabcontents[i].style.display = "none";
+            }
+
+            // Get all elements with class="tablinks" and remove the class "active"
+            var tablinks = document.getElementsByClassName("tablinks");
+            for (var i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            // Show the current tab, and add an "active" class to the button that opened the tab
+            document.getElementById(tabName).style.display = "block";
+            event.currentTarget.className += " active";
+        }
+    </script>
+    
+</section>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+      const counters = document.querySelectorAll('.number');
+      counters.forEach(counter => {
+          const updateCount = () => {
+              const target = +counter.getAttribute('data-target');
+              const count = +counter.innerText.replace('%', '');
+              const increment = target / 100;
+  
+              if (count < target) {
+                  counter.innerText = `${Math.ceil(count + increment)}%`;
+                  setTimeout(updateCount, 20);
+              } else {
+                  counter.innerText = `${target}%`;
+              }
+          };
+  
+          updateCount();
+      });
+  });
+      </script>
+      <div class="my-price">PRICING SECTION</div>
+    </div>
+</div>
+      <!-- end of resume section -->
+      </div>
+      <form action="send_email.php" method="post">
+        <label for="full_name">Full Name:</label>
+        <input type="text" id="full_name" name="full_name"><br><br>
+        
+        <label for="phone_number">Phone Number:</label>
+        <input type="tel" id="phone_number" name="phone_number"><br><br>
+        
+        <label for="email_address">Email Address:</label>
+        <input type="email" id="email_address" name="email_address"><br><br>
+        
+        <label for="email_subject">Email Subject:</label>
+        <input type="text" id="email_subject" name="email_subject"><br><br>
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message"></textarea><br><br>
+        
+        <input type="submit" value="Send Message">
+      </form>
+      
+      <script>
+    //   <?php
+    //     $full_name = $_POST['full_name'];
+    //     $phone_number = $_POST['phone_number'];
+    //     $email_address = $_POST['email_address'];
+    //     $email_subject = $_POST['email_subject'];
+    //     $message = $_POST['message'];
+      
+    //     $to_email = "your_email@example.com"; // Replace with your email address
+      
+    //     $headers = "From: $email_address\r\n";
+    //     $headers .= "Reply-To: $email_address\r\n";
+    //     $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
+      
+    //     $body = "Full Name: $full_name\nPhone Number: $phone_number\nEmail Address: $email_address\nEmail Subject: $email_subject\nMessage: $message";
+      
+    //     mail($to_email, $email_subject, $body, $headers);
+      
+    //     echo "Message sent successfully!";
+    //   ?>
+    // </script>
+      <!-- <div class="heading">contact <span>me</span></div>
+<form action="#">
+  <div class="input-box">
+    <input type="text"placeholder="Full Name">
+    <input type="email"placeholder="Email Address">
+  </div>
+  <div class="input-box">
+    <input type="number"placeholder="Phone Number">
+    <input type="email"placeholder="Email Subject">
+  </div>
+<textarea name="message"id=""col="30"rows="10"placeholder="Your Message"></textarea>
+<input type="submit"value="Send Message"class=btn>
+</form> -->
+      
+</body>
+
+</html>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+
+</script>

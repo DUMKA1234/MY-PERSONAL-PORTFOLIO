@@ -1,0 +1,449 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'dumka.css'%}">
+    <title>my portfolio</title>
+</head>
+<body>
+ <!-- Move to up button
+ <div class="scroll-button">
+  <a href="#home"><i class="fas fa-arrow-up"></i></a>
+</div>
+ navgaition menu -->
+<!-- <nav>
+  <div class="navbar">
+    <img  src="{%static './images/Dumka1.jpg'%}" alt="">
+
+    <div class="logo"><a href="#">Portfolio.</a></div>
+    <ul class="menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <div class="cancel-btn">
+        <i class="fas fa-times"></i>
+      </div>
+    </ul>
+    <div class="media-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+  <div class="menu-btn">
+    <i class="fas fa-bars"></i>
+  </div>
+</nav>  -->
+<form method="post">
+  {% csrf_token %}
+  <label for="full_name">Full Name:</label>
+  <input type="text" id="full_name" name="full_name"><br><br>
+  
+  <label for="phone_number">Phone Number:</label>
+  <input type="tel" id="phone_number" name="phone_number"><br><br>
+  
+  <label for="email_address">Email Address:</label>
+  <input type="email" id="email_address" name="email_address"><br><br>
+  
+  <label for="email_subject">Email Subject:</label>
+  <input type="text" id="email_subject" name="email_subject"><br><br>
+  
+  <label for="message">Message:</label>
+  <textarea id="message" name="message"></textarea><br><br>
+  
+  <input type="submit" value="Send Message">
+</form>
+</body>
+</html>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+
+</script>
+
+/* Responsive Media Query */
+  @media (max-width: 1920px) {
+    section .content{
+      width: 85%;
+    }
+    img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+        margin-top: 0;
+        margin-right:0px;
+        margin-left:10px;
+        
+       }
+  }
+  @media (max-width: 1920px) {
+    nav .navbar{
+      width: 90%;
+    }
+    nav .navbar .menu{
+      position: fixed;
+      left: -100%;
+      top: 0;
+      background: #0E2431;
+      height: 100vh;
+      max-width: 400px;
+      width: 100%;
+      padding-top: 60px;
+      flex-direction: column;
+      align-items: center;
+      transition: all 0.5s ease;
+    }
+    .navbar.active .menu{
+      left: 0;
+    }
+    nav .navbar .menu a{
+      font-size: 23px;
+      display: block;
+      color: #fff;
+      margin: 10px 0;
+     
+    }
+    nav.sticky .menu a:hover{
+      color: #4070f4;
+    }
+    nav .navbar .media-icons{
+      display: none;
+    }
+    nav .menu-btn,
+    .navbar .menu .cancel-btn{
+      display: block;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    nav  .logo  {
+    font-size: 20px;
+    color:blue;
+    font-weight: 100px;
+    text-transform: uppercase;
+    margin-right:100%;
+      
+    }
+    nav .menu-btn{
+        color: #4070f4;
+        padding-top:0px;
+        margin-right:800px;
+       
+      }
+  }
+@media only screen and (max-width:768px){
+    /* For mobile phones: */
+    .home {
+      height: 300vh;
+      width: 100%;
+      padding: 10px;
+        height: 150vh;
+        width: 100%;
+      }
+  
+      span {
+        font-size: 40px;
+        color: blue;
+      }
+      .text2 {
+        font-size: 15px;
+        color: white;
+        padding-left: 20px;
+        padding-top: 130px;
+      }
+      
+      .text3 {
+        font-size: 30px;
+        color: white;
+        padding-left: 20px;
+      }
+      
+      span {
+        font-size: 30px;
+        color: blue;
+        padding-left: 20px;
+      }
+      
+      .button {
+        position: absolute;
+        left: 30px;
+        width: 100px;
+        height: 50px;
+        border-radius: 7px;
+        font-size: 20px;
+        border-style: none;
+        background-color: blue;
+        color: white;
+      
+      }
+    }
+      @media only screen and (max-width: 1920px) {
+        @media only screen 
+        and (min-device-width: 414px) 
+        and (max-device-width: 896px) 
+        and (-webkit-device-pixel-ratio: 2) {
+        .console-container {
+          font-family: Khula;
+          font-size: 4em;
+          text-align: left;
+          height: 100px;
+          width: 500px;
+          display: block;
+          position: absolute;
+          color: white;
+          top: 30px;
+          bottom: 0;
+          left: 0;
+          right: 30px;
+          margin: auto;
+          padding-left: 10px;
+      }
+      
+      .console-underscore {
+        display: inline-block;
+        position: relative;
+        top: -1.20px;
+        left: 0px;
+      }
+    }
+    }
+    @media only screen and (max-width: 1920px) {
+      .con-image {
+        margin-top: 120px;
+        height: 250px;
+        width: 320px;
+        top: 410px;
+        position: absolute;
+        left: 10px;
+        margin-left: 20px;
+        background-color: brown;
+        border-bottom: purple;
+        border-radius: 20px;
+        box-shadow: 10px 10px 10px #181a1d, inset -10px -10px 10px #202225;
+      }
+    
+      .con-image img {
+        padding: 15px;
+        width: 300px;
+        height: 250px;
+        border-color: red;
+        border-radius: 20px;
+        padding-left: 15px;
+      }
+    }
+      @media only screen and (max-width: 1920px) {
+      .text5 {
+        margin-top: 270px;
+        font-size: 15Px;
+        font-weight: bolder;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-left: 20px;
+        padding-top: 300px;
+        text-align: justify;
+        line-height: 1.5;
+        padding-bottom: 20px;
+        width: 300px;
+        height: 150px;
+      }
+      }
+
+      /* features section media query */
+    
+    /* Mobile View */
+@media only screen and (max-width: 1920px) {
+    .feature-content {
+      margin: 20px auto;
+    }
+  
+    .feature1 {
+      padding-top: 150px;
+      font-size: 30px;
+      padding-left: 10px;
+      text-align: center;
+    }
+  
+    .feature {
+      font-size: 30px;
+    }
+  
+    .feature-con {
+      display: block;
+      width: 100%;
+      height: auto;
+      padding: 20px;
+      padding-left: 20px;
+    }
+  
+    .box2-frontend, .box3-djangle, .box5-backend, .box4-analysis {
+      width: 90%;
+      height: auto;
+      padding: 20px;
+      margin-top: 20px;
+     
+      margin-left: 15px;
+    }
+  
+    .box2-frontend img, .box3-djangle img, .box5-backend img, .box4-analysis img {
+      width: 50px;
+      height: 50px;
+    }
+  
+    .frontend, .DJ-developer, .back-end {
+      font-size: 20px;
+    }
+  
+    .analysis {
+      font-size: 30px;
+      
+    }
+  
+    .analysis-con {
+      width: 100%;
+      height: auto;
+      padding: 20px;
+      padding-left: 20px;
+    }
+  }
+  
+  
+  /* portfolio media query */
+  @media only screen and (max-width: 1920px) {
+    h2 {
+      padding-top: 20px;
+      font-size: 20px;
+     margin-right: 20px;
+    }
+  
+    .port {
+      font-size: 25px;
+      padding-top: 20px;
+     
+      margin-left: 20px;
+    }
+  
+    .portfolio-con {
+      display: block;
+      width: 80%;
+      margin: 0 auto;
+      padding: 10px;
+      height: auto;
+      margin-left: 20px;
+    }
+  
+    .box6-image img, .box7-image img {
+      width: 90%;
+      height: auto;
+      padding-left: 10px;
+    }
+  
+    .djangle1 {
+      font-size: 18px;
+      padding-top: 10px;
+    }
+  
+    .djangle1-text {
+      font-size: 20px;
+    }
+  }
+  /* data analysis visualization */
+  /* Mobile view only */
+  @media only screen and (max-width: 1920px) {
+    .analysis-text {
+      padding: 20px;
+      font-size: 15px;
+    }
+  
+    .analysis2-con {
+      width: 80%;
+      flex-direction: column;
+      height: auto;
+      padding: 10px;
+      margin-left: 25px;
+    }
+  
+    .powerbi-image img, .tableau-image img {
+      width: 90%;
+      height: auto;
+      padding-left: 0;
+      margin-left: 15px;
+    }
+  
+    .powerbi, .powerbi-text, .tableau, .tableau-text {
+      font-size: 18px;
+      padding-top: 5px;
+    }
+  }
+
+
+  
+/* RESUME SECTION OF MEDIA QUERY */
+  /* Mobile and Tablet view styles */
+@media only screen and (max-width: 1024px) {
+  .con-experience {
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+    gap: 20px;
+  }
+  .box-experience2 {
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    font-size: 18px;
+  }
+  .box-experience3 {
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    font-size: 18px;
+  }
+  .box-experience3 h1{
+    font-size:  25x;
+    font-weight:bold;
+  }
+  .box-experience2 h1{
+    font-size:25x;
+    font-weight:bold;
+  }
+  .container-bar1{
+    padding-top:200px;
+    width: 50%;
+    height: 500px;
+    margin: 0 auto;
+  }
+  .resume-heading {
+    color: yellowgreen;
+    font-size: 15px;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 300px;
+    text-transform: uppercase;
+    padding: 50px 30px;
+    margin-top:300px;
+  
+  }
+  
+  .skills {
+    width: 100%;
+    height: 500px;
+    align-items: center;
+    display: flex;
+    padding-left: 20px;
+    gap: 20px;
+  }
+  
+  .skill {
+    text-align: center;
+    color: white;
+  }
+}
+  
+  
+  
