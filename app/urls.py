@@ -7,15 +7,8 @@ from django.conf import settings
 
 urlpatterns=[
     path('homepage/', views.homepage,name='homepage'),
-    path('portfolio/', views.portfolio,name='portfolio'),
-    path('feature/', views.feature, name='feature'),
-   path('dumka/', views.dumka, name='dumka'),
-   
-    path('feature/', views.feature,name='feature'), 
     path('success/', views.success,name='success') , 
-    path('kpea/', views.kpea,name='kpea'), 
-    path('nk/', views.nk,name='nk'), 
+    path('portfolio/', views.portfolio,name='portfolio'), 
     
     
 ]
-# send_mail_page

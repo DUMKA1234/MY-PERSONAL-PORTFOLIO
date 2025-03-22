@@ -12,14 +12,7 @@ def homepage(request):
     return render(request,'index.html')
 def portfolio(request):
     return render(request,'portfolio.html')
-def feature(request):
-    return render(request,'feature.html')
-def kpea(request):
-    return render(request,'kpea.html')
-def dumka(request):
-    return render(request,'dumka.html')
-def nk(request):
-    return render(request,'nk.html')
+
  
  
  
